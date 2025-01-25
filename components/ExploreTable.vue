@@ -24,18 +24,26 @@
         <div class="col-md-8">
           <div class="input-group mb-3">
 
-            <input type="text" class="form-control"  
-            id="minEloInput"
-            v-bind="{value: eloRange[0]}">
+            <input
+              type="text"
+              class="form-control"  
+              id="minEloInput"
+              v-bind="{value: eloRange[0]}"
+            >
 
-            <input type="text" class="form-control" 
-            id="maxEloInput"
-            v-bind="{value: eloRange[1]}">
+            <input
+              type="text"
+              class="form-control" 
+              id="maxEloInput"
+              v-bind="{value: eloRange[1]}"
+            >
 
-            <button class="btn btn-outline-secondary exploreApplyBtn" 
-            type="button" 
-            id="applyEloRangeBtn"
-            @click="setEloRange">
+            <button
+              class="btn btn-outline-secondary exploreApplyBtn" 
+              type="button" 
+              id="applyEloRangeBtn"
+              @click="setEloRange"
+            >
 
             Apply
           </button>
@@ -49,18 +57,26 @@
         <div class="col-md-8">
           <div class="input-group mb-3">
 
-            <input type="text" class="form-control" 
-            id="minAccuracyInput"
-            v-bind="{value: accuracyRange[0]}">
+            <input
+              type="text"
+              class="form-control" 
+              id="minAccuracyInput"
+              v-bind="{value: accuracyRange[0]}"
+            >
 
-            <input type="text" class="form-control" 
-            id="maxAccuracyInput" 
-            v-bind="{value: accuracyRange[1]}">
+            <input 
+              type="text"
+              class="form-control" 
+              id="maxAccuracyInput" 
+              v-bind="{value: accuracyRange[1]}"
+            >
 
-            <button class="btn btn-outline-secondary exploreApplyBtn" 
-            type="button" 
-            id="applyAccuracyRangeBtn"
-            @click="setAccuracyRange">
+            <button
+              class="btn btn-outline-secondary exploreApplyBtn" 
+              type="button" 
+              id="applyAccuracyRangeBtn"
+              @click="setAccuracyRange"
+            >
 
             Apply
             </button>
@@ -74,19 +90,26 @@
         </div>
         <div class="col-md-8">
           <div class="input-group mb-3">
-            <input type="date" class="form-control" 
-            id="minDateInput"
-            v-bind="{value: dateRange[0]}">
+            <input
+              type="date"
+              class="form-control" 
+              id="minDateInput"
+              v-bind="{value: dateRange[0]}"
+            >
 
-            <input type="date" class="form-control" 
-            id="maxDateInput" 
-            v-bind="{value: dateRange[1]}">
+            <input
+              type="date"
+              class="form-control" 
+              id="maxDateInput" 
+              v-bind="{value: dateRange[1]}"
+            >
 
             <button class="btn btn-outline-secondary exploreApplyBtn" 
-            type="button" 
-            id="applyDateRangeBtn"
-            @click="setDateRange">
-            Apply
+              type="button" 
+              id="applyDateRangeBtn"
+              @click="setDateRange"
+            >
+              Apply
             </button>
           </div>
                     
@@ -99,18 +122,25 @@
         </div>
         <div class="col-md-8">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" 
-            id="minMoveInput"
-            v-bind="{value: moveRange[0]}">
+            <input
+              type="text"
+              class="form-control" 
+              id="minMoveInput"
+              v-bind="{value: moveRange[0]}"
+            >
 
-            <input type="text" class="form-control" 
-            id="maxMoveInput" 
-            v-bind="{value: moveRange[1]}">
+            <input
+              type="text"
+              class="form-control" 
+              id="maxMoveInput" 
+              v-bind="{value: moveRange[1]}"
+            >
 
             <button class="btn btn-outline-secondary exploreApplyBtn" 
-            type="button" 
-            id="applyMoveRangeBtn"
-            @click="setMoveRange">
+              type="button" 
+              id="applyMoveRangeBtn"
+              @click="setMoveRange"
+            >
             Apply
             </button>
           </div>
@@ -131,35 +161,35 @@
               v-show="key !== 'gameUrl'"
             >
 
-            <button
-              class="btn dropdown-toggle column-filter-selector" 
-              data-bs-toggle="dropdown"
-              >
-              {{ capitalize(key) }} 
-            </button> 
+              <button
+                class="btn dropdown-toggle column-filter-selector" 
+               data-bs-toggle="dropdown"
+               >
+               {{ capitalize(key) }} 
+              </button> 
 
-            <ul class="dropdown-menu dropdown-menu-end ">
-              <li v-for="(option, optionIndex) in filterOptions[key] || []"
+              <ul class="dropdown-menu dropdown-menu-end ">
+                <li v-for="(option, optionIndex) in filterOptions[key] || []"
 
-              class="dropdown-item"
-              :class="{ active: activeFilters[key].includes(option) }"
-              :key="'option-' + optionIndex"
-              @click="filterColumnBy(key, option)"
-              >
+                class="dropdown-item"
+                :class="{ active: activeFilters[key].includes(option) }"
+                :key="'option-' + optionIndex"
+                @click="filterColumnBy(key, option)"
+                >
 
-                {{ option }}
+                  {{ option }}
 
-              </li>
-              
-              <li>
-                <hr class="dropdown-divider">
-              </li>
+                </li>
+                
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
 
-              <li class="dropdown-item" @click="sortBy(key)">
-                Sort Ascending
-              </li>
+                <li class="dropdown-item" @click="sortBy(key)">
+                  Sort Ascending
+                </li>
 
-            </ul>
+             </ul>
               
             </th>
 
