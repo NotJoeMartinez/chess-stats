@@ -8,38 +8,37 @@
     <p style="text-align:center">Enter your chess.com username to generate a full export of your games.</p>
 
     <div class="input-group input-group-lg input-group--username">
-                        <input type="text" placeholder="Username"
-                            list="gmsList"
-                            id="uname"
-                            aria-describedby="u-addon" 
-                            autocapitalize="none" 
-                            autocorrect="off"
-                            v-model="userName"
-                            class="form-control username-input"
-                            > 
-                        <span class="input-group-prepend">
-                          <button type="submit"
-                                  class="btn btn-secondary"
-                                  id="unameBtn"
-                                  @click="submitForm()">
-                                  Get Insights 
-                          </button>
-                          <button type="button"
-                                  class="btn btn-secondary"
-                                  id="uploadBtn"
-                                  data-bs-toggle="tooltip" 
-                                  data-bs-placement="top" 
-                                  title="Upload json file"
-                                  @click="uploadFile">
-                                  <font-awesome-icon :icon="['fas', 'file-arrow-up']" />
-                          </button>
-
-                      </span>
-
+      <input type="text" placeholder="Username"
+        list="gmsList"
+        id="uname"
+        aria-describedby="u-addon" 
+        autocapitalize="none" 
+        autocorrect="off"
+        v-model="userName"
+        class="form-control username-input"
+      > 
+      <span class="input-group-prepend">
+        <button type="submit"
+          class="btn btn-secondary"
+          id="unameBtn"
+          @click="submitForm()">
+          Get Insights 
+        </button>
+        <button type="button"
+          class="btn btn-secondary"
+          id="uploadBtn"
+          data-bs-toggle="tooltip" 
+          data-bs-placement="top" 
+          title="Upload json file"
+          @click="uploadFile"
+        >
+            <font-awesome-icon :icon="['fas', 'file-arrow-up']" />
+        </button>
+      </span>
     </div>
 
-  <div> 
-  </div>
+    <div> 
+    </div>
   </div>  
   <datalist id="gmsList">
   </datalist>
